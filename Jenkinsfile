@@ -1,23 +1,10 @@
 pipeline {
-  agent any
-
-  stages {
-    stage('Build') {
-      steps {
-        echo '🏗️ Build en cours...'
-      }
+    agent any
+    stages {
+        stage("Hello") {
+            steps {
+                echo "Hello from Multibranch Pipeline"
+            }
+        }
     }
-
-    stage('Test') {
-      steps {
-        echo '🧪 Tests en cours...'
-      }
-    }
-
-    stage('Deploy') {
-      steps {
-        echo '🚀 Déploiement terminé !'
-      }
-    }
-  }
 }
